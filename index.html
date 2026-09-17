@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+    </div>
+    <main class="game">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                ✕ <span>VS</span> ○
+            </div>
+            <h1> TIC TAC TOE</h1>
+            <p>Challenge your mind. Beat the board. 🧠</p>
+        </header>
+        <!-- MODE -->
+        <section class="controls">
+            <button class="mode active" data-mode="ai">
+                🤖 VS AI
+            </button>
+            <button class="mode" data-mode="pvp">
+                👥 VS FRIEND
+            </button>
+        </section>
+        <!-- SCORE -->
+        <section class="scoreboard">
+            <div class="score xScore">
+                <span>✕</span>
+                <strong id="scoreX">0</strong>
+                <small>PLAYER X</small>
+            </div>
+            <div class="score draws">
+                <span>🤝</span>
+                <strong id="scoreDraw">0</strong>
+                <small>DRAWS</small>
+            </div>
+            <div class="score oScore">
+                <span>○</span>
+                <strong id="scoreO">0</strong>
+                <small id="oLabel">AI O</small>
+            </div>
+        </section>
+        <!-- TURN -->
+        <div class="turn" id="turn">
+            <span class="turnIcon">✕</span>
+            <span id="turnText">
+                Your Turn
+            </span>
+        </div>
+        <!-- BOARD -->
+        <section class="board" id="board">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+        </section>
+        <!-- BUTTONS -->
+
+        <div class="actions">
+
+            <button id="newGame">
+                🔄 New Game
+            </button>
+
+            </div>
+        <p class="tip">
+            💡 Tip: Control the center to increase your chances!
+        </p>
+
+    </main>
+    <!-- WIN MODAL -->
+    <div class="modal" id="modal">
+        <div class="modalBox">
+            <div id="resultEmoji">
+                🎉
+            </div>
+
+            <h2 id="resultTitle">
+                You Win!
+            </h2>
+
+            <p id="resultText">
+                Amazing move!
+            </p>
+
+            <button id="playAgain">
+                🚀 Play Again
+            </button>
+        </div>
+    </div>
+    <!-- CONFETTI -->
+    <div id="confetti"></div>
+    <script src="script.js"></script>
+</body>
+</html>
